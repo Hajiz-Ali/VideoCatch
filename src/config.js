@@ -95,7 +95,7 @@ export function loadConfig(overrides = {}) {
 
     dataDir: strEnv(env, "DATA_DIR", "data"),
     serveFrontend: boolEnv(env, "SERVE_FRONTEND", true),
-    frontendDir: strEnv(env, "FRONTEND_DIR", path.resolve(SERVER_ROOT, "..")),
+    frontendDir: strEnv(env, "FRONTEND_DIR", SERVER_ROOT),
 
     logLevel: strEnv(env, "LOG_LEVEL", "info"),
     logFile: strEnv(env, "LOG_FILE", ""),

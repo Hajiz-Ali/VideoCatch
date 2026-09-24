@@ -1,6 +1,6 @@
 /* Live end-to-end check: boots the real server, analyzes a real public
  * video, downloads it, and verifies the served file. Requires node,
- * yt-dlp and ffmpeg to be configured (see server/.env). Run:
+ * yt-dlp and ffmpeg to be configured (see .env). Run:
  *   npm run e2e
  */
 import "dotenv/config";
