@@ -1,0 +1,20 @@
+{
+  "name": "universal-video-downloader-server",
+  "version": "1.0.0",
+  "description": "Backend for the VideoCatch Universal Video Downloader. Real media extraction via yt-dlp + ffmpeg, with per-source handler architecture, queued downloads and streaming progress.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test \"test/*.test.mjs\"",
+    "e2e": "node scripts/e2e-live.mjs"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

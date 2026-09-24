@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>YouTube Video Downloader — Save Videos in MP4 &amp; HD for Free</title>
+<meta name="description" content="Free online YouTube video downloader. Download YouTube videos in MP4, HD, 4K and MP3 in seconds — no software install, works right in your browser.">
+<meta name="keywords" content="youtube video downloader, youtube downloader, download youtube videos, youtube to mp4, youtube to mp3, free video downloader">
+<meta name="robots" content="index, follow">
+<meta name="author" content="VideoCatch">
+<meta name="theme-color" content="#0B0D10">
+<link rel="canonical" href="https://www.yourdomain.com/"><!-- TODO: replace with your real domain -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VideoCatch">
+<meta property="og:title" content="YouTube Video Downloader — Save Videos in MP4 &amp; HD for Free">
+<meta property="og:description" content="Download YouTube videos in MP4, HD, 4K and MP3 in seconds — no software install, works in your browser.">
+<meta property="og:url" content="https://www.yourdomain.com/"><!-- TODO: replace with your real domain -->
+<meta property="og:image" content=""><!-- TODO: add a 1200x630 social share image -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="YouTube Video Downloader — Save Videos in MP4 &amp; HD for Free">
+<meta name="twitter:description" content="Download YouTube videos in MP4, HD, 4K and MP3 in seconds — free, no software install.">
+<meta name="twitter:image" content=""><!-- TODO: add the same 1200x630 social share image -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "VideoCatch — YouTube Video Downloader",
+      "url": "https://www.yourdomain.com/",
+      "description": "Free online YouTube video downloader that saves videos in MP4, HD, 4K and MP3 straight from your browser.",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebApplication",
+      "name": "VideoCatch YouTube Video Downloader",
+      "url": "https://www.yourdomain.com/",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap site-inner">
+    <a href="#" class="brand" aria-label="VideoCatch — YouTube Video Downloader home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M5 4l14 8-14 8V4z" fill="#06201B"/></svg>
+      </span>
+      VideoCatch
+    </a>
+    <nav class="primary" id="primaryNav">
+      <a href="#how">How it works</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow"><span class="dot"></span> YouTube Video Downloader</span>
+    <h1 class="hero-title">Download YouTube videos in the <span class="grad">best quality</span> — free</h1>
+    <p class="hero-sub">Paste a YouTube link and grab the file in MP4, HD, 4K or MP3. We'll fetch the available resolutions, formats and sizes before you download anything — no software to install.</p>
+
+    <form class="url-card" id="analyzeForm">
+      <div class="url-row">
+        <label for="videoUrl" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Video URL</label>
+        <div class="url-input-shell">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.07 0l2.83-2.83a5 5 0 00-7.07-7.07L11.5 4.5"/><path d="M14 11a5 5 0 00-7.07 0L4.1 13.83a5 5 0 007.07 7.07L12.5 19.5"/></svg>
+          <input type="url" id="videoUrl" name="videoUrl" placeholder="https://example.com/watch?v=..." autocomplete="off" spellcheck="false" inputmode="url" required>
+          <button type="button" class="btn btn-icon" id="pasteBtn" title="Paste from clipboard" aria-label="Paste URL from clipboard">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="12" height="16" rx="2"/><path d="M9 4h6v2H9z"/></svg>
+          </button>
+        </div>
+        <button type="submit" class="btn btn-primary" id="analyzeBtn">
+          <span class="label">Download</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="url-hint">Works with direct video page links. Playlists and private/members-only links aren't supported yet.</p>
+    </form>
+
+    <div class="notice" role="note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg>
+      <span>Availability depends entirely on the source website. DRM-protected, age-restricted, private or geo-blocked content may not be downloadable. You can also download videos from other websites.</span>
+    </div>
+
+    <div class="error-banner" id="errorBanner" role="alert">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+      <div>
+        <strong id="errorTitle">Something went wrong</strong>
+        <span id="errorMessage"></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="skeleton" id="skeleton" aria-hidden="true">
+    <div class="sk-card">
+      <div class="sk-thumb"></div>
+      <div class="sk-lines">
+        <div class="sk-line w60"></div>
+        <div class="sk-line w40"></div>
+        <div class="sk-line w30"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="result" id="resultSection" aria-live="polite">
+    <div class="video-card">
+      <div class="video-card-top">
+        <div class="thumb-wrap">
+          <img id="thumbImg" src="" alt="">
+          <span class="thumb-duration" id="durationBadge"></span>
+        </div>
+        <div class="video-meta">
+          <h2 class="video-title" id="videoTitle"></h2>
+          <div class="video-tags">
+            <span class="tag" id="sourceTag">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+              <span id="sourceText"></span>
+            </span>
+            <span class="tag" id="formatTag"></span>
+          </div>
+        </div>
+      </div>
+      <div class="video-card-body">
+        <p class="section-label">Choose quality</p>
+        <div class="quality-grid" id="qualityGrid"></div>
+
+        <div class="dl-row">
+          <button class="btn btn-download" id="downloadBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+            <span id="downloadBtnLabel">Download</span>
+          </button>
+          <span class="format-note" id="estSizeNote"></span>
+        </div>
+
+        <div class="progress-wrap" id="progressWrap">
+          <div class="progress-head">
+            <span class="progress-status" id="progressStatus">Starting…</span>
+            <span class="progress-pct" id="progressPct">0%</span>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+
+        <div class="state-msg success" id="successMsg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span id="successText"></span>
+        </div>
+        <div class="state-msg error" id="dlErrorMsg">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+          <span id="dlErrorText"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap footer-inner">
+    <span>© 2026 VideoCatch. Not affiliated with any video platform.</span>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
